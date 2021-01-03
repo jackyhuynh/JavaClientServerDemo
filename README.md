@@ -1,6 +1,6 @@
 # Automotive Customization System
 Automotive Customization System is an individual project using Java. The application allow multiple users get access to the server, and modify the data (which is cars) in the server. The sever and client object was implemented using Object Oriented Programing to encapsulate the implementation and access to the user. ArrayList is used as the main container for this project (instead of a real database). The update data is write to a text file to simplifier the process. The System can be fully extend to a database  
-![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/tree/main/picture/Capture 1.PNG?raw=true)
+![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture%201.PNG)
 ## Technology:
 Java, Servlet, Object-Oriented Design, Encapsulation, Data Structures, Algorithm, Apache Tom Cat, Servelet, Client-Sever Implementation
 
