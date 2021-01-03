@@ -13,39 +13,60 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 - Eclipse IDE: The Eclipse IDE is famous for our Java Integrated Development Environment (IDE), but we have a number of pretty cool IDEs, including our C/C++ IDE, JavaScript/TypeScript IDE, PHP IDE, and more. 
 - Java Runtime Enviroment and Java Virtual Machine: Java software for your computer, or the Java Runtime Environment, is also referred to as the Java Runtime, Runtime Environment, Runtime, JRE, Java Virtual Machine, Virtual Machine, Java VM, JVM, VM, Java plug-in, Java plugin, Java add-on or Java download.
-Give examples
+- Apache Tomcat (called "Tomcat" for short) is an open-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies. Tomcat provides a "pure Java" HTTP web server environment in which Java code can run.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of examples that tell you how to get a development enviroment running
 
 Download and Install Java (Java Runtime Enviroment or Java Virtual Machine)
 * [Java for Windows](https://java.com/en/download/) - we should download and install JVM before the Eclipse IDE 
 Download and Install Eclipse IDE
 * [Install Eclipse IDE](https://www.eclipse.org/ide/) - If you haven't downloaded and installed Eclipse IDE yet, here's how to get started.
 There is other IDE that can run Java code, but we must download the JVM
-
+* [Install Apache Tomcat](https://tomcat.apache.org/download-80.cgi) 
 
 
 ## Running the tests
 
 Explain how to run the automated tests for this system:
 
-Start Client/Driver/Driver.java
+Start server Server/driver/Driver.java
 ```
 package driver;
 
 /*
- * "<CIS 35B>- Lab <4>"
+ *
  * Author :	Truc Huynh
  * Program :	AutomotiveSystem
- * 
+ */
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import server.CreateServerConnectionToClient;
+
+public class Driver {
+	
+	public static void main(String args[])throws IOException 
+        {
+            CreateServerConnectionToClient server = new CreateServerConnectionToClient(new ServerSocket(5555));
+        }
+}
+```
+
+Start client Client/driver/Driver.java
+```
+package driver;
+
+/*
+ *
+ * Author :	Truc Huynh
+ * Program :	AutomotiveSystem
  */
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import client.DefaultSocketClient;
-
 
 public class Driver 
 {	
@@ -65,13 +86,27 @@ public class Driver
  	 }
                 
 }
-	
-	
 ```
+a. Run Server and test if Server is function properly
+    - Tested complete successfully.
+
+b. Simultaneously create three clients and test if they are function properly
+    - Tested complete successfully.
+
+c. Upload the data to Server (#1):
+Create multithreading Server that can handle multiple clients. In Image 1, I run one server and three clients. The Server will receive a properties file (data) which upload by the client (#1), parse it, and store it on the server. (Validate data is successfully upload)
+![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture%201.PNG)
+    - Tested complete successfully.
+
+d. Send Request to Server (#2)
+e. Received Request from Server (#2) (#3)
+
+
+
 
 ## Deployment
 
-Can be deploy to any embedded system without any problem. Can also make API or libary using this. 
+Can be deploy to sever using Apache Tomcat 
 
 ## Built With
 
