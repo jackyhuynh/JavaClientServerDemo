@@ -1,7 +1,5 @@
 # Automotive Customization System
-Automotive Customization System is an individual project using Java. The application allow multiple users get access to the server, and modify the data (which is cars) in the server. The sever and client object was implemented using Object Oriented Programing to encapsulate the implementation and access to the user. ArrayList is used as the main container for this project (instead of a real database). The update data is write to a text file to simplifier the process. The container can be replace with a database system (SQL Server or My SQL), and will perform the full function of an API.
-
-![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture%201.PNG)
+Automotive Customization System is an individual project using Java. The application allow multiple users get access to the server, and modify the data (which is cars) in the server. The sever and client object was implemented using Object Oriented Programing to encapsulate the implementation and access to the user. Link Hash Map is used as the main container for this project (instead of a real database). The update data is write to a text file to simplifier the process. The container can be replace with a database system (SQL Server or My SQL), and will perform the full function of an API. Project can be extend to a full e-commerce page if the following component is add: a better GUI for the clients, payment API (Paypal), and a database system.
 
 ## Technology:
 Java, Servlet, Object-Oriented Design, Encapsulation, Data Structures, Algorithm, Apache Tom Cat, Servelet, Client-Sever Implementation
@@ -22,9 +20,9 @@ Download and Install Java (Java Runtime Enviroment or Java Virtual Machine)
 * [Java for Windows](https://java.com/en/download/) - we should download and install JVM before the Eclipse IDE 
 Download and Install Eclipse IDE
 * [Install Eclipse IDE](https://www.eclipse.org/ide/) - If you haven't downloaded and installed Eclipse IDE yet, here's how to get started.
-There is other IDE that can run Java code, but we must download the JVM
+* [Net Bean IDE](https://netbeans.org/features/index.html)
 * [Install Apache Tomcat](https://tomcat.apache.org/download-80.cgi) 
-
+There is other IDE that can run Java code, but we must download the JVM and Apache Tomcat for this particular project.
 
 ## Running the tests
 Explain how to run the automated tests for this system:
@@ -91,16 +89,25 @@ public class Driver
 - Tested complete successfully.
 
 ### Upload the data to Server (#1):
-Create multithreading Server that can handle multiple clients. In Image 1, I run one server and three clients. The Server will receive a properties file (data) which upload by the client (#1), parse it, and store it on the server. (Validate data is successfully upload)
+- Create multithreading Server that can handle multiple clients. In Image 1, I run one server and three clients. The Server will receive a properties file (data) which upload by the client (#1), parse it, and store it on the server. (Validate data is successfully upload)
 
 ![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture%201.PNG)
 
 - Tested complete successfully.
+- After client_T (#1) post (send) the text file (properties file) to the server. Server receive the properties file and parsed the text file to create an instance of Automobile and store it in the Link Hash Map (which is the application database) (Refer to Image 2).
+
+![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture2.PNG)
 
 ### Send Request to Server (#2)
-e. Received Request from Server (#2) (#3)
+- Client-T (#2) send a request to the Server for cars configuration. Then Server will send the respond back (instance of Automobile). (Image 3)
 
+![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture3.PNG)
 
+- Tested complete successfully.
+
+### Received Request from Server (#2) (#3)
+
+- Tested complete successfully.
 
 
 ## Deployment
