@@ -1,6 +1,8 @@
 # Automotive Customization System
-Automotive Customization System is an individual project using Java. The application allow multiple users get access to the server, and modify the data (which is cars) in the server. The sever and client object was implemented using Object Oriented Programing to encapsulate the implementation and access to the user. ArrayList is used as the main container for this project (instead of a real database). The update data is write to a text file to simplifier the process. The System can be fully extend to a database  
+Automotive Customization System is an individual project using Java. The application allow multiple users get access to the server, and modify the data (which is cars) in the server. The sever and client object was implemented using Object Oriented Programing to encapsulate the implementation and access to the user. ArrayList is used as the main container for this project (instead of a real database). The update data is write to a text file to simplifier the process. The container can be replace with a database system (SQL Server or My SQL), and will perform the full function of an API.
+
 ![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture%201.PNG)
+
 ## Technology:
 Java, Servlet, Object-Oriented Design, Encapsulation, Data Structures, Algorithm, Apache Tom Cat, Servelet, Client-Sever Implementation
 
@@ -9,30 +11,63 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 What things you need to install the software and how to install them
-- Visual Studio: If install visual studio to run this program only will be a waste of time. I highly recommend using Linux Command Line (g++) instead. If Visual Studio already install on your computer this will be nice
-- Command-Prompt for Visual Studio: Same go here. For this particular project, I highly recommend using Command-Prompt instead of the IDE.
-- Linux: Program can be run on Linux System (if you familiar with Linux command line). 
-- Any C/C++ compiler: If you have any compiler that already install then I highly recommend use your own compiler with out installing anything (time consuming).
+- Eclipse IDE: The Eclipse IDE is famous for our Java Integrated Development Environment (IDE), but we have a number of pretty cool IDEs, including our C/C++ IDE, JavaScript/TypeScript IDE, PHP IDE, and more. 
+- Java Runtime Enviroment and Java Virtual Machine: Java software for your computer, or the Java Runtime Environment, is also referred to as the Java Runtime, Runtime Environment, Runtime, JRE, Java Virtual Machine, Virtual Machine, Java VM, JVM, VM, Java plug-in, Java plugin, Java add-on or Java download.
 Give examples
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
- Visual Studio & Command-Prompt for Visual Studio:
+Download and Install Java (Java Runtime Enviroment or Java Virtual Machine)
+* [Java for Windows](https://java.com/en/download/) - we should download and install JVM before the Eclipse IDE 
+Download and Install Eclipse IDE
+* [Install Eclipse IDE](https://www.eclipse.org/ide/) - If you haven't downloaded and installed Eclipse IDE yet, here's how to get started.
+There is other IDE that can run Java code, but we must download the JVM
 
-* [Install Visual Studio](https://docs.microsoft.com/en-us/cpp/build/vscpp-step-0-installation?view=msvc-160#:~:text=Visual%20Studio%202019%20Installation%201%20Make%20sure%20your,...%204%20Choose%20workloads.%20...%20More%20items...) - If you haven't downloaded and installed Visual Studio and the Microsoft C/C++ tools yet, here's how to get started.
-* [Developer Command Prompt for Visual Studio](https://docs.microsoft.com/en-us/dotnet/framework/tools/developer-command-prompt-for-vs#:~:text=%20Developer%20Command%20Prompt%20for%20Visual%20Studio%20,from%20inside%20Visual%20Studio.%20For%20easier...%20More) - Developer Command Prompt for Visual Studio enables you to use .NET Framework tools more easily. It's a command prompt that automatically sets specific environment variables. After opening Developer Command Prompt, you can enter the commands for .NET Framework tools such as ildasm or clrver.
 
-Linux Ubuntu 18.4 LTS
-* [Linux Ubuntu 18.4 LTS](https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngvndl3q?activetab=pivot:overviewtab) can be download at Microsoft Store
 
 ## Running the tests
 
 Explain how to run the automated tests for this system:
-* [Linux Compilers](https://askubuntu.com/questions/61408/what-is-a-command-to-compile-and-run-c-programs#:~:text=The%20simplest%20way%20to%20compile%20a%20C%2B%2B%20program,only%20compiler%20capable%20of%20compiling%20the%20Linux%20kernel.)- Locate the home folder that contain the program (by using the cd command). Call the g++ compiler and execute.
-* [Visual Studio Command Line](https://docs.microsoft.com/en-us/cpp/build/walkthrough-compiling-a-native-cpp-program-on-the-command-line?view=msvc-160
-)
+
+Start Client/Driver/Driver.java
+```
+package driver;
+
+/*
+ * "<CIS 35B>- Lab <4>"
+ * Author :	Truc Huynh
+ * Program :	AutomotiveSystem
+ * 
+ */
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import client.DefaultSocketClient;
+
+
+public class Driver 
+{	
+	public static void main(String args[])
+        {
+            String LocalHost = "";
+            try
+            {
+                //Get the LocalHost...
+                 LocalHost =  InetAddress.getLocalHost().getHostName();
+            }
+            catch (UnknownHostException e){
+                System.err.println ("Unable to find local host");
+            }
+            DefaultSocketClient d = new DefaultSocketClient(LocalHost, 5555);
+            d.start();
+ 	 }
+                
+}
+	
+	
+```
 
 ## Deployment
 
