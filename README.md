@@ -17,8 +17,7 @@ What things you need to install the software and how to install them
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development enviroment running
-
+A step by step series of examples that tell you how to get a development enviroment running.
 Download and Install Java (Java Runtime Enviroment or Java Virtual Machine)
 * [Java for Windows](https://java.com/en/download/) - we should download and install JVM before the Eclipse IDE 
 Download and Install Eclipse IDE
@@ -28,10 +27,9 @@ There is other IDE that can run Java code, but we must download the JVM
 
 
 ## Running the tests
-
 Explain how to run the automated tests for this system:
-
-Start server Server/driver/Driver.java
+### Run Server and test if Server is function properly
+- Start server Server/driver/Driver.java
 ```
 package driver;
 
@@ -53,8 +51,11 @@ public class Driver {
         }
 }
 ```
+- Tested complete successfully.
 
-Start client Client/driver/Driver.java
+### Simultaneously create three clients and test if they are function properly
+-Start client Client/driver/Driver.java
+
 ```
 package driver;
 
@@ -87,18 +88,16 @@ public class Driver
                 
 }
 ```
-a. Run Server and test if Server is function properly
-    - Tested complete successfully.
+- Tested complete successfully.
 
-b. Simultaneously create three clients and test if they are function properly
-    - Tested complete successfully.
-
-c. Upload the data to Server (#1):
+### Upload the data to Server (#1):
 Create multithreading Server that can handle multiple clients. In Image 1, I run one server and three clients. The Server will receive a properties file (data) which upload by the client (#1), parse it, and store it on the server. (Validate data is successfully upload)
-![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture%201.PNG)
-    - Tested complete successfully.
 
-d. Send Request to Server (#2)
+![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture%201.PNG)
+
+- Tested complete successfully.
+
+### Send Request to Server (#2)
 e. Received Request from Server (#2) (#3)
 
 
