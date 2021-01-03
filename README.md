@@ -1,5 +1,5 @@
 # Automotive Customization System
-Automotive Customization System is an individual project using Java. The application allow multiple users get access to the server, and modify the data (which is cars) in the server. The sever and client object was implemented using Object Oriented Programing to encapsulate the implementation and access to the user. Link Hash Map is used as the main container for this project (instead of a real database). The update data is write to a text file to simplifier the process. The container can be replace with a database system (SQL Server or My SQL), and will perform the full function of an API. Project can be extend to a full e-commerce page if the following component is add: a better GUI for the clients, payment API (Paypal), and a database system.
+Automotive Customization System is an individual project using Java. The application allow multiple users get access to the server, and modify the data (which is cars) in the server. The application also allow each user to configurate their car and upload it to the server (please refer to the picture). The server and client object was implemented using Object Oriented Programing to encapsulate the design and access. Link Hash Map is used as the main container for this project (instead of a real database). The update data is write to a text file to simplifier the process. The container can be replace with a database system (SQL Server or My SQL), and will perform the full function of an API. Project can be extend to a full e-commerce page if the following component is add: a better GUI for the clients, payment API (Paypal), and a database system.
 
 ## Technology:
 Java, Servlet, Object-Oriented Design, Encapsulation, Data Structures, Algorithm, Apache Tom Cat, Servelet, Client-Sever Implementation
@@ -20,7 +20,7 @@ Download and Install Java (Java Runtime Enviroment or Java Virtual Machine)
 * [Java for Windows](https://java.com/en/download/) - we should download and install JVM before the Eclipse IDE 
 Download and Install Eclipse IDE
 * [Install Eclipse IDE](https://www.eclipse.org/ide/) - If you haven't downloaded and installed Eclipse IDE yet, here's how to get started.
-* [Install Net Bean IDE](https://netbeans.org/features/index.html)
+* [Install Net Bean IDE](https://netbeans.org/features/index.html) - You can use either Eclipse IDE or Net Bean IDE, not need both. If you haven't downloaded and installed Eclipse IDE yet, here's how to get started.
 * [Install Apache Tomcat](https://tomcat.apache.org/download-80.cgi) 
 There is other IDE that can run Java code, but we must download the JVM and Apache Tomcat for this particular project.
 
@@ -119,7 +119,7 @@ public class Driver
 - Tested complete successfully.
 
 ### Conclusion
-The Server and Clients satisfy basic communication: send and receive request. Server receive upload data and store in its database (instance of Link Hash Map). The clients have ability to insert, update and delete an Automobile. No crashing with the Implementation of Exception Handling(helper class)
+The Server and Clients satisfy basic communication: send and receive request. Server receive upload data and store in its database (instance of Link Hash Map). The clients have ability to insert, update and delete an Automobile. Each test in the picture has been perform 30 to 40 times (depend on what tasks). There is crashing  during the test with the Implementation of Exception Handling(helper class).
 
 ## Deployment
 
@@ -127,11 +127,11 @@ Can be deploy as web client and server that can handle multiple clients using Ap
 
 ## Architecture UML Design
 
-- Client Diagram:
+### Client Diagram:
 
 ![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/ClientUML.gif)
 
-- User Diagram:
+### Server Diagram:
 
 ![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/ServerUML.gif)
 
