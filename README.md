@@ -52,7 +52,7 @@ public class Driver {
 - Tested complete successfully.
 
 ### Simultaneously create three clients and test if they are function properly
--Start client Client/driver/Driver.java
+- Start client Client/driver/Driver.java
 
 ```
 package driver;
