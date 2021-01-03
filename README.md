@@ -20,7 +20,7 @@ Download and Install Java (Java Runtime Enviroment or Java Virtual Machine)
 * [Java for Windows](https://java.com/en/download/) - we should download and install JVM before the Eclipse IDE 
 Download and Install Eclipse IDE
 * [Install Eclipse IDE](https://www.eclipse.org/ide/) - If you haven't downloaded and installed Eclipse IDE yet, here's how to get started.
-* [Net Bean IDE](https://netbeans.org/features/index.html)
+* [Install Net Bean IDE](https://netbeans.org/features/index.html)
 * [Install Apache Tomcat](https://tomcat.apache.org/download-80.cgi) 
 There is other IDE that can run Java code, but we must download the JVM and Apache Tomcat for this particular project.
 
@@ -82,8 +82,7 @@ public class Driver
             }
             DefaultSocketClient d = new DefaultSocketClient(LocalHost, 5555);
             d.start();
- 	 }
-                
+ 	 }            
 }
 ```
 - Tested complete successfully.
@@ -98,26 +97,50 @@ public class Driver
 
 ![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture2.PNG)
 
-### Send Request to Server (#2)
+### Client Send Request to Server (Client #2)
 - Client-T (#2) send a request to the Server for cars configuration. Then Server will send the respond back (instance of Automobile). (Image 3)
 
 ![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture3.PNG)
 
 - Tested complete successfully.
 
-### Received Request from Server (#2) (#3)
+### Client Received Request from Server (Client #2, Client #3)
+- Client-T (#2) will get the choice from this instance of Automobile and store it within this Automobile. Picture below show successfully configurate the Car (Upload the data to server successfully) (Image 4)
+
+![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture4.PNG)
 
 - Tested complete successfully.
 
+### Send and Received Request from Server (Client #3)
+- Call Client-T (#3) to configurate a Car after terminate Client-T (#2) to verify if the data is successful upload to the Server. (Image 5)
+
+![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/Capture5.PNG)
+
+- Tested complete successfully.
+
+### Conclusion
+The Server and Clients satisfy basic communication: send and receive request. Server receive upload data and store in its database (instance of Link Hash Map). The clients have ability to insert, update and delete an Automobile. No crashing with the Implementation of Exception Handling(helper class)
 
 ## Deployment
 
-Can be deploy to sever using Apache Tomcat 
+Can be deploy as web client and server that can handle multiple clients using Apache Tomcat.
+
+## Architecture UML Design
+
+- Client Diagram:
+
+![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/ClientUML.gif)
+
+- User Diagram:
+
+![alt text](https://github.com/jackyhuynh/automotiveCustomizationSystem-Java/blob/main/picture/ServerUML.gif)
 
 ## Built With
 
-* [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/) - The full-featured integrated development environment (IDE) for Android, iOS, Windows, web, and cloud 
-* [.NET](https://dotnet.microsoft.com/download/dotnet-framework) -  Free. Cross-platform. Open source. A developer platform for building Internet of Thing(IOT), Microservices, Desktop, Cloud, Mobile, Machine Learning, Web, Game.
+* [Java Virtual Machine](https://java.com/en/download/)
+* [Eclipse IDE for Windows](https://www.eclipse.org/ide/)
+* [Net Bean IDE for Windows](https://netbeans.org/features/index.html)
+* [Apache Tomcat](https://tomcat.apache.org/download-80.cgi) 
 
 ## Contributing
 
@@ -130,8 +153,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Truc Huynh** - *Initial work* - [TrucDev](https://github.com/jackyhuynh)
-* **Yien Lin** - *Initial work* - [YienLin](https://www.linkedin.com/in/yienlin/)
-* **Dmitry Sokolov** - *Initial work* - [DmitrySokolov](https://www.linkedin.com/in/dmitry-sokolov-726596a4/)
+
 
 ## Format
 my README.md format was retrieved from
