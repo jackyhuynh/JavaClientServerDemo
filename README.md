@@ -2,7 +2,15 @@
 Automotive Customization System is an individual project using Java. The application allows multiple users to get access to the server, and modify the data (which is cars) in the server. The application also allows each user to configure their car and upload it to the server (please refer to the picture). The server and client object was implemented using Object Oriented Programing to encapsulate the design and access. Link Hash Map is used as the main container for this project (instead of a real database). The update data is written to a text file to simplifier the process. The container can be replaced with a database system (SQL Server or My SQL) and will perform the full function of an API. The project can be extended to a full e-commerce page if the following component is added: a better GUI for the clients, payment API (Paypal), and a database system.
 
 ## Technology:
-Java, Servlet, Object-Oriented Design, Encapsulation, Data Structures, Algorithm, Apache Tom Cat, Servelet, Client-Sever Implementation
+- Java
+- Servlet
+- Object-Oriented Design
+- Encapsulation
+- Data Structures
+- Algorithm
+- Apache Tom Cat
+- Client-Sever Implementation
+- Backend
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -163,10 +171,5 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
 
 
